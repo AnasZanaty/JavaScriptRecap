@@ -1,4 +1,14 @@
 
+//                             //## JavaScript Refresh Notes
+
+// This section is a quick recap of the core JavaScript concepts I needed to refresh after getting back to working with React again.
+
+// The goal is to revisit the fundamentals (scope, closures, promises, async/await, array methods, etc.) to make sure my React code stays clean, predictable, and easier to debug.
+
+// These notes are not meant to be a full guide, but rather a focused reminder of the parts of JavaScript that are used frequently in real-world React development.
+
+
+
 // window.onload = function (){
 // document.querySelector("h1").style.color = "Blue";
 // };
@@ -19,7 +29,7 @@
 
 // console.log("hello from %cjs %cfile", "color: red; font-size :40px","color: blue; font-size :40px")
 
-//es6 
+//es6
 
 // var myname = "osama"
 
@@ -28,7 +38,7 @@
 
 // ====> es6 standards
 
-// console.log(`Hello ${myname}`);  
+// console.log(`Hello ${myname}`);
 
 
 //data types
@@ -36,20 +46,20 @@
 //string
 
 //  ==> string
-// console.log(typeof"anas"); 
+// console.log(typeof"anas");
 
 // // ==> number
-// console.log(typeof 3); 
+// console.log(typeof 3);
 
-// // ==> array  ==> object type 
+// // ==> array  ==> object type
 
-// console.log(typeof[10, 20 , 30]); 
+// console.log(typeof[10, 20 , 30]);
 
-// console.log(typeof["aa", "dd" , "dd"]); 
+// console.log(typeof["aa", "dd" , "dd"]);
 
-// // object only 
+// // object only
 
-// console.log(typeof {name:"osama", age:20 , country:'egy'}); 
+// console.log(typeof {name:"osama", age:20 , country:'egy'});
 
 // //boolean
 
@@ -126,7 +136,7 @@
 
 // console.log(name.length  );
 
-// console.log(name.trim()  ); //remove spaces 
+// console.log(name.trim()  ); //remove spaces
 // console.log(name.trim().charAt(2).toUpperCase()  ); //A
 
 // console.log(name.toUpperCase())
@@ -158,38 +168,38 @@
 
 // console.log(a.substring(2,6));
 // console.log(a.substring(6,2)); //swap directly
-// console.log(a.substring(-9,));//transform any negative to 0 
+// console.log(a.substring(-9,));//transform any negative to 0
 
-// console.log(a.slice(2,6)); 
+// console.log(a.slice(2,6));
 // console.log(a.slice(6,2)); //cant swap
 // console.log(a.slice(-5,2));  // start counting indexes from the end
 
-// console.log(a.substr(2,6)); // start counting from 2 and count another 6 
+// console.log(a.substr(2,6)); // start counting from 2 and count another 6
 // console.log(a.substr(-5,2)); // / start counting indexes from the end and count another 2 (0 index not counted we are counting chars here)
 // console.log(a.slice(-5,2)); // subtract from lenght to get the start which will be
-// //start 20 , end  2  so it will fail 
+// //start 20 , end  2  so it will fail
 
 // // console.log(a.includes("Anas")); //true //is string contains Anas in the whole string
 // // console.log(a.includes("Anas",10));  //true//is string contains Anas start from index 10
 // // console.log(a.startsWith("a",2));//true but "A" is false (case sensitive)
-// // console.log(a.endsWith("r"));//true 
-// // console.log(a.endsWith("s",4 ));//true  4 is the length of chars number of chars (Anas) and yes ends with s 
+// // console.log(a.endsWith("r"));//true
+// // console.log(a.endsWith("s",4 ));//true  4 is the length of chars number of chars (Anas) and yes ends with s
 
 
 // //comparison operators
 
 // console.log(10 != "10");  //false
 
-// console.log(10==="10") //false  
+// console.log(10==="10") //false
 
 
-// // == , !=  equal and not equal compare value only 
-// // === , !== identical and not identical compare value and type 
+// // == , !=  equal and not equal compare value only
+// // === , !== identical and not identical compare value and type
 
 
-// //ternary operator 
+// //ternary operator
 
-// //falcy value 
+// //falcy value
 // let x= 0; // or let x=""  or let x =null
 
 //  typeof(x) === typeof(7) ? console.log("equality") :
@@ -198,7 +208,7 @@
 //  : console.log("nothing");
 
 
-//  //null coalescing 
+//  //null coalescing
 
 // console.log(`the price is ${x || 100}`) //100 for (null , undefined and falcey value)
 
@@ -208,26 +218,308 @@
 //ARRAYS
 
 
-let myFriend =["Ahmed", "Mohamed" , "Sayed", ["Marwan" , "Ali"]];
+// let myFriend =["Ahmed", "Mohamed" , "Sayed", "Ali"];
 
-console.log(`hello ${myFriend[0]}`); //Ahmed
+// console.log(`hello ${myFriend[0]}`); //Ahmed
 
-console.log(`hello ${myFriend[1][2]}`); //h
+// console.log(`hello ${myFriend[1][2]}`); //h
 
-console.log(`hello ${myFriend[3]}`); //"Marwan Ali"
+// console.log(`hello ${myFriend[3]}`); //"Marwan Ali"
+
+// console.log(`hello ${myFriend[3][1]}`); //" Ali"
+
+// console.log(`hello ${myFriend[3][1][1]}`); //" l"
+
+// myFriend[1] ="mahmoud" //update array
+
+// myFriend[3] ="anas" //changed the nested array to string
+
+// console.log(myFriend) // ['Ahmed', 'mahmoud', 'Sayed', 'anas']
+
+// console.log (Array.isArray(myFriend)) //true
+
+// let str ="momo"
+
+// console.log (Array.isArray(str)) //false
+
+
+
+                //length , index of , shift , sort
+
+// console.log(myFriend.length);
+
+// myFriend[3] = "mohsen";
+
+// console.log(myFriend.length) ="mohsen"; // add to  array
+
+// console.log(myFriend.length-1) ="mohsen"; //override the last value in any array
+
+
+// myFriend.unshift("lolo","soso"); //adding in the start of the array
+// myFriend.push("lolo","soso"); //adding in the last of the array
+// myFriend.shift() //remove the first element in the array
+
+// console.log(myFriend)
+
+
+// console.log(myFriend.indexOf("Ahmed", 2)) //اللي جنبها دي انا قولتله ابحث من اندكس 2
+// //-1 عشان ملاقهوش
+
+// console.log(myFriend.indexOf("Sayed", 1))
+// //2
+
+//sort +ve numbers then -ve then strings ABC
+
+//reverse العكس
+
+// myFriend.sort().reverse();
+// console.log(myFriend.slice(1,3)) //not included the ending //mohamed sayed
+// console.log(myFriend.slice(-3,-1)) //mohamed sayed بس العد من اليمين
+
+// // myFriend.splice(0,0,"Ahmed","hassan")
+
+// console.log(myFriend)
+
+// myFriend.splice(2,1,"Ahmed","hassan") //sayed will be deleted and other strings will be replaced him
+
+// console.log(myFriend)
+
+// let newarray  =[1,2]
+// let friends = myFriend.concat(newarray,"Ahmed","hassan") //sayed will be deleted and other strings will be replaced him
+
+// console.log(friends)
+
+// console.log(friends.join(" ,  "))  يفصل بين العناصر ويزيل الاقواس
+
+
+//for loops
+
+
+//continue عديه اعمل له Skip
+//break بنخرج برة اللووب
+
+
+//label
+
+// mainLoop:
+// for (let i = 0; i < 3; i++) {
+//   for (let j = 0; j < 3; j++) {
+//     if (j === 1) {
+//       continue mainLoop; // يكمل اللوب الخارجي مباشرة
+//     }
+//     console.log(i, j);
+//   }
+// }
+
+
+//do while لازم هتنفذ اول اتيريشن بعد كدة بتشيك على الشرط
+
+//While بتشيك الاول فممكن جدا اول اتيريشن متحصلشح
+
+
+
+                      //FUNCTIONS
+
+// function sayhello(userName, age){
+
+//     if(age === undefined)
+// age ="UnKnown"
+
+// age = age || "UnKnown"
+
+//     console.log(`Hello from my function ${userName} and my age is ${age}`)
+// }
+
+// sayhello(" ya nosa" );
+
+
+// function sayhello(userName, age){
+//     return `Hello from my function ${userName} and my age is ${age}`
+// }
+
+//default value for parameters are undefined
+
+
+                                      //rest parameters
+
+
+// function calc (...numbers){
+// console.log(Array.isArray(numbers)) //true ه=هي عبارة عن مصفوفة لماحطيت تريبل دوت
+
+// let result =0;
+
+// for (let i = 0 ; i<numbers.length ; i++){
+// result+=numbers[i];
+// }
+// return `final result of summition is ${result}`
+// }
+
+// console.log(calc(10,20,30,40,50));
+
+
+                                //Anonymous function ملهاش اسم او تايتل
+
+//  document.getElementById("show").onclick = function (){
+//     console.log("show");
+//  } ;            
  
-console.log(`hello ${myFriend[3][1]}`); //" Ali"
+//  setTimeout(function(){  //timeout 2 sec , no need to name my function 
+//     console.log("good");
+//  },2000)
 
-console.log(`hello ${myFriend[3][1][1]}`); //" l"
 
-myFriend[1] ="mahmoud" //update array
+                               //Arrow functions
 
-myFriend[3] ="anas" //changed the nested array to string 
+                               //without parameters 
+                               
+//  let print1 = () => 10;  //must be one line
+//  console.log(print1());
 
-console.log(myFriend) // ['Ahmed', 'mahmoud', 'Sayed', 'anas']
 
-console.log (Array.isArray(myFriend)) //true
+//   let print2 = (num, name) => {return`hell this is num ${num} and this is the string ${name}`};
+ 
+//  console.log(print2(15,"hi")); //هنا لازم ريترن عشان في اقواس
 
-let str ="momo"
 
-console.log (Array.isArray(str)) //false
+//priority for local scope then to global scope
+
+//lexical scope  multi functions with different scopes
+
+
+//higher order functions 
+
+let myNums = [1,2,3,4,5,6]
+
+let maped = myNums.map(function(element, index , arr){
+    return element+element
+})
+
+
+                                    //higher order map function with arrow function
+
+// //1
+// let mapedWithArrow = myNums.map((element, index , arr) => element+element)
+// //2
+// let mapedWithArrow1input = myNums.map((element) => element+element)
+
+// console.log(maped)
+// console.log(mapedWithArrow)
+// console.log(mapedWithArrow1input)
+
+// function addition(elm){
+//     return elm+elm
+// }
+ 
+// //3
+// let add = myNums.map(addition);
+// console.log(add)
+ 
+
+
+
+// transfor array to string use ==> join("")
+// transfor string to array use ==> split("")
+
+
+                            // paractice on map
+
+
+
+
+// let mixedString = "AnAs"
+// let oppositeMixedString = mixedString.split("")
+//                                     .map(function(element){
+//                                         return element === element.toLowerCase()?element.toUpperCase(): element.toLowerCase()
+//                                     })
+// console.log(oppositeMixedString.join(""));    
+
+// let numbers =[1, -5, 2,-3]
+// let oppositeNumbers = numbers.map(function(element){
+//     return  element*-1 
+// })
+// console.log(oppositeNumbers)
+
+// let NumberWithName ="A45nas205"
+// let ignoreNumbers = NumberWithName.split("").map(function(element){
+//     return isNaN(element)? element: ""
+// })
+
+// let ignoreNumbersArrow = NumberWithName.split("").map((element) => isNaN(element)? element: ""
+// )
+
+// console.log(ignoreNumbers.join(""))
+// console.log(ignoreNumbersArrow.join(""))
+
+
+
+
+                                    //Higher order Function fillter
+
+ // if filter condition return true the element with return with same value 
+ 
+//  let names =["anas", "mo", "ahmed"]
+
+//  let filtered = names.filter(function(element){
+//     return element.startsWith("a")
+//  })
+
+//  console.log(filtered)
+
+
+                                // Higher order Reduce Function
+
+
+let nums =[1,2,3,4,5]
+let addWithReduce= nums.reduce(function(accumlator , current , index , arr){
+    return accumlator+current
+})
+
+console.log(addWithReduce)
+
+//with initial value 
+let addWithReduceWithInitial= nums.reduce(function(accumlator , current , index , arr){
+    return accumlator+current
+},0)
+
+console.log(addWithReduceWithInitial)
+
+
+//first accumilator first value is the first element if ther's no dfault value
+//then the result of the function is the next accumilator value 
+
+ // first current the is the  next element after accumilator or after initial value
+//then the next current is the next element 
+
+
+
+
+                        // Higher Order Function ForEach
+
+
+let allLis = document.querySelectorAll("ul li");
+let allDivs = document.querySelectorAll(".content div");
+
+allLis.forEach(function(ele) { 
+
+    ele.onclick = function()
+    
+    {
+
+        //remove active class from all element 
+        allLis.forEach(function(ele){
+            ele.classList.remove("active")
+        })
+
+        //add the Active class to the clicked class only
+
+ this.classList.add("active")   // 
+ 
+     //hide all divs
+
+     allDivs.forEach(function(ele){
+        ele.style.display = "none"
+     });
+
+    };  
+
+});
