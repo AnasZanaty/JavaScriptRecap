@@ -469,19 +469,19 @@ let maped = myNums.map(function(element, index , arr){
                                 // Higher order Reduce Function
 
 
-let nums =[1,2,3,4,5]
-let addWithReduce= nums.reduce(function(accumlator , current , index , arr){
-    return accumlator+current
-})
+// let nums =[1,2,3,4,5]
+// let addWithReduce= nums.reduce(function(accumlator , current , index , arr){
+//     return accumlator+current
+// })
 
-console.log(addWithReduce)
+// console.log(addWithReduce)
 
-//with initial value 
-let addWithReduceWithInitial= nums.reduce(function(accumlator , current , index , arr){
-    return accumlator+current
-},0)
+// //with initial value 
+// let addWithReduceWithInitial= nums.reduce(function(accumlator , current , index , arr){
+//     return accumlator+current
+// },0)
 
-console.log(addWithReduceWithInitial)
+// console.log(addWithReduceWithInitial)
 
 
 //first accumilator first value is the first element if ther's no dfault value
@@ -496,30 +496,147 @@ console.log(addWithReduceWithInitial)
                         // Higher Order Function ForEach
 
 
-let allLis = document.querySelectorAll("ul li");
-let allDivs = document.querySelectorAll(".content div");
+// let allLis = document.querySelectorAll("ul li");
+// let allDivs = document.querySelectorAll(".content div");
 
-allLis.forEach(function(ele) { 
+// allLis.forEach(function(ele) { 
 
-    ele.onclick = function()
+//     ele.onclick = function()
     
-    {
+//     {
 
-        //remove active class from all element 
-        allLis.forEach(function(ele){
-            ele.classList.remove("active")
-        })
+//         //remove active class from all element 
+//         allLis.forEach(function(ele){
+//             ele.classList.remove("active")
+//         })
 
-        //add the Active class to the clicked class only
+//         //add the Active class to the clicked class only
 
- this.classList.add("active")   // 
+//  this.classList.add("active")   // 
  
-     //hide all divs
+//      //hide all divs
 
-     allDivs.forEach(function(ele){
-        ele.style.display = "none"
-     });
+//      allDivs.forEach(function(ele){
+//         ele.style.display = "none"
+//      });
 
-    };  
+//     };  
 
+// });
+
+                        //Object
+
+
+
+// let user = {
+//   name: "Anas",
+//   addresses: {
+//     egypt: {
+//       one: "Cairo",
+//       two: "Alexandria"
+//     }
+//   }
+// };
+
+// console.log(user["addresses"]["egypt"]["one"]); // Cairo
+
+// user["phone"] = 022222222; //adding new prop to object
+// console.log(user) 
+
+// user.sayHello = function(){ //adding methods to object
+//     return 'hello'
+// }
+// console.log(user.sayHello) 
+
+
+//                          //decliration with new keyword 
+
+// let userwithnew = new Object({
+//     age : 20
+// });
+
+// // userwithnew["phone"] = 022222222; //adding new prop to object
+// // console.log(userwithnew) 
+
+// userwithnew.sayHello = function(){ //adding methods to object
+
+// return this.age*2
+
+// }
+// console.log(userwithnew.sayHello) 
+
+// console.log(userwithnew) 
+
+
+                           //this
+
+// myvar ="ahlan"
+
+// console.log(this) //window
+// console.log(this.myvar) //ahlan
+
+//this in the scope of object refer to the object instead of user/age you can use this.age
+
+
+                        //decliration with Object.create({}) method 
+
+
+// let obj =  Object.create();
+
+                                        //copying object
+
+// let userwithnew = new Object({
+//     age : 20
+// });
+
+// userwithnew.sayHello = function(){ //adding methods to object
+
+// return this.age*2
+
+// }
+
+// let obj =  Object.create(userwithnew);
+
+// obj.a = 10;
+// obj.age =30;
+
+// console.log(obj); //why not returning the multible
+// console.log(obj.sayHello()); //60 عشان انا عامل this في الاوبجكت الاصلي
+
+
+
+                                //declaring object with assign mehtod
+
+
+                                
+let obj1 = new Object({
+    age : 10,
+    name : "anas", 
+    double : function(){
+        return this.age *2
+    }
 });
+
+let obj2 = new Object({
+    age : 20,
+    double : function(){
+        return this.age *2
+    }
+});
+
+let target = new Object({
+    age : 30,
+    double : function(){
+        return this.age *2
+    }
+});
+
+
+let assignedObj = Object.assign({},obj1, obj2); 
+
+// assignedObj.age = 50;
+
+console.log(assignedObj) 
+console.log(target)  // the same as assignedObj
+
+console.log(assignedObj.double()) //100
