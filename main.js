@@ -609,34 +609,304 @@ let maped = myNums.map(function(element, index , arr){
 
 
                                 
-let obj1 = new Object({
-    age : 10,
-    name : "anas", 
-    double : function(){
-        return this.age *2
+// let obj1 = new Object({
+//     age : 10,
+//     name : "anas", 
+//     double : function(){
+//         return this.age *2
+//     }
+// });
+
+// let obj2 = new Object({
+//     age : 20,
+//     double : function(){
+//         return this.age *2
+//     }
+// });
+
+// let target = new Object({
+//     age : 30,
+//     double : function(){
+//         return this.age *2
+//     }
+// });
+
+
+// let assignedObj = Object.assign({},obj1, obj2); 
+
+// // assignedObj.age = 50;
+
+// console.log(assignedObj) 
+// console.log(target)  // the same as assignedObj
+
+// console.log(assignedObj.double()) //100
+
+
+
+
+
+                                    //DOM
+
+// document.getElementById(); //for id 
+// document.getElementsByName(); //for name ex: p
+// document.getElementsByClassName(); //for class
+// document.querySelector(); //id , class or name 
+// let myQqueryall =document.querySelectorAll(); //array of elements
+
+// console.log(myQqueryall[1]);
+// console.log(document.title) //page title
+// console.log(document.body) //page body
+// console.log(document.forms) //page forms
+// console.log(document.form[0]) // first page form
+// console.log(document.form[0].obj1) // first page with name obj1 form
+// console.log(document.links[0].href) // first link in the page
+
+
+                               //InnerText , Attributes
+
+// let myElement = document.querySelector(".js");
+// console.log(myElement.innerHTML); //print html contain tags
+// console.log(myElement.textContent);  //print html without tags tags
+
+// let mylink = document.querySelector(".link");
+
+// console.log(mylink.getAttribute("class"));
+// console.log(mylink.getAttribute("href"));
+
+// mylink.setAttribute("href","https://twitter.com");
+// mylink.setAttribute("title","twitter");
+
+// mylink.hasAttribute("data-src") // true or false if has attribute
+//  mylink.removeAttribute("data-src"); // remove attribute
+//mylink.hasAttributes();
+
+// let myElement = document.createElement("div");
+// let myAttr = document.createAttribute("data-custom");
+// let mycomment = document.createComment("this is my div")
+
+// myElement.setAttributeNode(myAttr); //attr willbe set with default values 
+// myElement.setAttribute("data-test", "Testing");
+
+// myElement.appendChild(document.createTextNode("Hello")); // ✅ صح
+
+// myElement.appendChild(mycomment); 
+
+// console.log(myElement);
+
+//children  ==> get elements only
+//childNodes ==> get elements with comments and texts
+
+
+                                    //DOM EVENTS
+
+
+//on click
+// let mybtn = document.getElementById("btn");
+// let mytext = document.getElementById("text");
+// let mysubmit = document.getElementById("myform");
+
+// mybtn.onclick = function (){
+//     return console.log("clicked");
+// }
+
+// mybtn.oncontextmenu = function (){ //when click right
+//     return console.log("clicked");
+// }
+
+// mybtn.onmouseenter = function (){ //when mouse hover
+//     return console.log("clicked");
+// }
+
+// mybtn.onmouseleave = function (){ //when mouse leave hovering
+//     return console.log("clicked");
+// }
+
+// mybtn.onscroll = function (){ //when scrolling
+//     return console.log("clicked");
+//}
+
+// window.onresize = function (){ //when resize
+//     return console.log("clicked");
+// }
+
+// mytext.onfocus = function (){ //when focus on text
+//     return console.log("clicked");
+// }
+
+// mytext.onblur = function (){ //when focus get out of text
+//     return console.log("blur");
+// }
+
+// mysubmit.onsubmit = function (){ //when focus dubmitting
+//     return console.log("submit");
+// }
+
+
+
+
+                                //Validation
+
+ //preventDefault() تمنع الفاليديشن الافتراضي
+
+ const myform = document.getElementById("myform");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const error = document.getElementById("error");
+
+// myform.addEventListener("submit", function (event) {
+
+//     event.preventDefault(); // تمنع الإرسال والـ reload
+
+//     if (username.value.trim() === "") {
+//         error.textContent = "Username is required";
+//         return;
+//     }
+
+//     if (email.value.trim() === "") {
+//         error.textContent = "Email is required";
+//         return;
+//     }
+
+//     error.textContent = "";
+//     console.log("Form submitted successfully ✅");
+// });
+
+
+                            //Event simulation
+
+                            
+// email.onblur = function (){
+//     email.focus() // ايفينت اجباري
+// }
+
+
+                            // classList
+
+
+//  let element = document.getElementById("content");
+// console.log(element.classList);
+
+// console.log(element.classList.contains("osama"));  //if has a class with name osama
+// console.log(element.classList.item("0"));  //class index 0
+
+// element.onclick = function (){ //adding classed
+//     element.classList.add("add-one", "add-two")
+// }
+
+// element.onclick = function (){ //removing classes
+//     element.classList.add("one", "two")
+// }
+
+// element.onclick = function (){ // add removing if found or not like switch classes
+//     element.classList.toggle("one", "two")
+// }
+
+                                //css style in DOM
+
+// element.style.color = "red";
+// element.style.cssText = "color : green ; opacity : 0.9";
+
+// element.style.removeProperty("color"); //remove property
+// element.style.setProperty("color","red"); //set property
+
+// document.styleSheets[0].rules[0].style.removeProperty("color"); //if you have external css
+
+
+
+                            //DOM BEFORE , AFTER , APPEND, preappend , REMOVE
+
+
+//  let element = document.getElementById("content");
+// let createdP = document.createElement("p");
+
+// element.after(createdP) //set element after element
+// element.before(createdP) //set element before element
+// element.append(createdP) //set element in the last of element
+//element.prepend(createdP) //set element in the first of element
+// element.remove(); //remove the whole element
+
+// console.log(element)
+
+
+
+                             //   DOM traversing
+
+// const child = document.getElementById("child1");
+
+// console.log(child.parentElement);
+
+// const parent = document.getElementById("parent");
+
+// console.log(parent.children);        // عناصر فقط
+// console.log(parent.childNodes);      // عناصر + نصوص + مسافات
+
+// const child1 = document.getElementById("child1");
+
+// child1.nextElementSibling;     // الأخ اللي بعده
+// child1.previousElementSibling; // الأخ اللي قبله
+// child1.nextSibling;//الااخ اللي بعده ومش شرط عنصر
+
+
+                                // DOM CLoning نيخ عناصر
+        
+// var card = document.getElementById("card");
+// var btn = document.getElementById("copy");
+
+// btn.onclick = function () {
+//     // عمل نسخة عميقة (deep clone)
+//     var clone = card.cloneNode(true);
+
+//     clone.id = "newone"
+//     // إزالة الـ id عشان ما يتكررش
+//     //clone.removeAttribute("id");
+
+//     // ممكن تعدل محتوى النسخة لو عايز
+//     clone.getElementsByTagName("h3")[0].textContent = "New Product";
+//     clone.getElementsByTagName("p")[0].textContent = "Price: 200$";
+// clone.id
+//     // ضيف النسخة للصفحة
+//     document.body.appendChild(clone);
+// };
+
+
+                                    //Add EventListener
+
+//ممكن تضيف أكتر من Listener لنفس الحدث.
+
+// const btn = document.getElementById("btn");
+
+// btn.addEventListener("click", function() {
+//     console.log("First listener");
+// });
+
+// btn.addEventListener("click", function() {
+//     console.log("Second listener");
+// });
+
+
+
+const myP = document.getElementById("myP");
+
+// لما تدوس على العنصر الأصلي يعمل clone
+myP.onclick = function () {
+    let newP = myP.cloneNode(true);  // deep clone
+    newP.className = "clone";        // اعطيه class
+    document.body.appendChild(newP); // أضفه للصفحة
+};
+
+
+// ده غلط، لأن querySelector بيرجع أول عنصر بس، والنسخة ممكن تكون لسة مش موجودة وقت التنفيذ
+
+// let cloned = document.querySelector(".clone"); 
+// cloned.onclick = function () {
+//     console.log("I'm Cloned");
+// };
+
+
+// Event delegation لكل الـ clicks في الصفحة
+document.addEventListener("click", function(e) {
+    if (e.target) // العنصر اللي دوست عليه 
+     {
+        console.log(e.target); // هيرجع العنصر اللي اتضغط عليه
     }
 });
-
-let obj2 = new Object({
-    age : 20,
-    double : function(){
-        return this.age *2
-    }
-});
-
-let target = new Object({
-    age : 30,
-    double : function(){
-        return this.age *2
-    }
-});
-
-
-let assignedObj = Object.assign({},obj1, obj2); 
-
-// assignedObj.age = 50;
-
-console.log(assignedObj) 
-console.log(target)  // the same as assignedObj
-
-console.log(assignedObj.double()) //100

@@ -1,0 +1,29 @@
+{
+ "cSpell.enabled": true,
+ "cSpell.diagnosticLevel": "Hint",
+ "cSpell.checkComments": true,
+ "cSpell.checkStrings": true,
+ "cSpell.checkIdentifiers": true,
+ "cSpell.language": "en,ar",
+ "cSpell.enabledLanguageIds": [
+   "php",
+   "blade",
+   "javascript",
+   "typescript",
+   "javascriptreact",
+   "typescriptreact",
+   "vue",
+   "html",
+   "css",
+   "cs",
+   "md",
+   "scss",
+   "less",
+   "json",
+   "jsonc",
+   "yaml",
+   "markdown"
+ ],
+//  "cSpell.ignorePaths": [
+//  ]
+}
