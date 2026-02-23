@@ -1,6 +1,8 @@
 
 //                             //## JavaScript Refresh Notes
 
+// const { use } = require("react");
+
 // This section is a quick recap of the core JavaScript concepts I needed to refresh after getting back to working with React again.
 
 // The goal is to revisit the fundamentals (scope, closures, promises, async/await, array methods, etc.) to make sure my React code stays clean, predictable, and easier to debug.
@@ -748,10 +750,10 @@ let maped = myNums.map(function(element, index , arr){
 
  //preventDefault() تمنع الفاليديشن الافتراضي
 
- const myform = document.getElementById("myform");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const error = document.getElementById("error");
+//  const myform = document.getElementById("myform");
+// const username = document.getElementById("username");
+// const email = document.getElementById("email");
+// const error = document.getElementById("error");
 
 // myform.addEventListener("submit", function (event) {
 
@@ -801,7 +803,7 @@ const error = document.getElementById("error");
 //     element.classList.toggle("one", "two")
 // }
 
-                                //css style in DOM
+                                /history.forward()/css style in DOM
 
 // element.style.color = "red";
 // element.style.cssText = "color : green ; opacity : 0.9";
@@ -885,14 +887,14 @@ const error = document.getElementById("error");
 
 
 
-const myP = document.getElementById("myP");
+// const myP = document.getElementById("myP");
 
 // لما تدوس على العنصر الأصلي يعمل clone
-myP.onclick = function () {
-    let newP = myP.cloneNode(true);  // deep clone
-    newP.className = "clone";        // اعطيه class
-    document.body.appendChild(newP); // أضفه للصفحة
-};
+// myP.onclick = function () {
+//     let newP = myP.cloneNode(true);  // deep clone
+//     newP.className = "clone";        // اعطيه class
+//     document.body.appendChild(newP); // أضفه للصفحة
+// };
 
 
 // ده غلط، لأن querySelector بيرجع أول عنصر بس، والنسخة ممكن تكون لسة مش موجودة وقت التنفيذ
@@ -904,9 +906,108 @@ myP.onclick = function () {
 
 
 // Event delegation لكل الـ clicks في الصفحة
-document.addEventListener("click", function(e) {
-    if (e.target) // العنصر اللي دوست عليه 
-     {
-        console.log(e.target); // هيرجع العنصر اللي اتضغط عليه
-    }
-});
+// document.addEventListener("click", function(e) {
+//     if (e.target) // العنصر اللي دوست عليه 
+//      {
+//         console.log(e.target); // هيرجع العنصر اللي اتضغط عليه
+//     }
+// });
+
+
+
+
+
+
+
+///                      BOM (Browser Object Model)
+
+
+                            //Alert , confirm , prompt
+
+//ده مسؤول عن التعامل مع المتصفح نفسه مش الصفحة.
+
+//window object is the browser window
+//windoe contains the document object
+
+// alert("Test"); //بيعطل الصفحة في مكاتب تانية افضل من دة
+// // sweetalert2 
+
+// let confirmMsg = confirm("Confirmation Message?") //ok , cancel message 
+
+// let promptMsg = prompt("which day is good for you?", "Friday") //text
+// console.log(promptMsg);
+
+
+
+                            //SetTimeOut , ClearTimeout
+    
+// set time for function to act                            
+// setTimeout(function(){
+// console.log("message")
+// },3000);
+
+
+
+// function print (user){
+//     console.log(`I am message with parameter ${user}`)
+// }
+
+// let timeout = setTimeout(print, 5000,"anas");
+// let btn = document.querySelector("button")
+
+// btn.onclick = function(){
+//     clearTimeout(timeout) //لازم تباصيله التايم اوت
+// }
+
+
+
+                            // Setinterval , ClearInterval
+
+
+// set repeating for function to act    
+
+// let btn = document.querySelector("button")
+// let interval = setInterval(function(){
+// console.log("message")
+// },3000);
+
+// btn.onclick = function(){
+//     clearInterval(interval) 
+// }
+
+
+
+                            //Location Object
+
+// console.log(window.location)
+
+// //href
+
+// console.log(location.href)
+// // location.href = "https://google.com"; //doesnt delete your previous entry sites from history
+// location.href  ="/#sec02"
+// console.log(location.host)
+// console.log(location.hostname)
+// console.log(location.hostname)
+// console.log(location.protocol)
+
+// // window.location.reload()
+
+// window.location.replace() //replace and delete your previous entry sites from history
+
+
+
+//                                 //Open , close 
+
+// // window.close() //close what opened with windwo.open
+
+// setTimeout(() => {
+//     window.open("https://google.com","_blank","width=400, height=400") //_blank in another page , _self in the same page
+// }, 2000);
+
+
+
+
+                                //Window history
+
+// 
