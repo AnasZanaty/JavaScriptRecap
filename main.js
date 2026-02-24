@@ -803,7 +803,6 @@ let maped = myNums.map(function(element, index , arr){
 //     element.classList.toggle("one", "two")
 // }
 
-                                /history.forward()/css style in DOM
 
 // element.style.color = "red";
 // element.style.cssText = "color : green ; opacity : 0.9";
@@ -1010,4 +1009,136 @@ let maped = myNums.map(function(element, index , arr){
 
                                 //Window history
 
-// 
+// console.log(history.length) //pages number in history
+// history.forward() //next page 
+// history.back() //before page 
+// history.go() //takes parameter 1  next page , -1 before page you can use -2 , 2 ..etc
+
+
+
+                            // Stop, print , focus , scrollTo , scroll , scrollby
+
+// window.stop()  //stop loading 
+// window.print() //print page
+
+// let myNewWindo = window.open("https://google.com", "", "width=400, height=400")
+// window.focus(myNewWindo) //focus on specific page 
+// myNewWindo.focus() //another way
+
+// myNewWindo.close() //close the page that opened with open
+
+//Scroll , like ScrollTo but Scroll is not supported in some browsers like safari
+
+// window.scrollTo(500,200) //scroll me to this location static location
+
+// window.scrollTo({
+//     left:500,
+//     top:200,
+//     behavior: "smooth" //smoth scroll
+// })
+
+// window.scrollBy(500,200) //from my location will go by this distance
+
+// console.log(window.scrollX == window.pageXOffset) //true
+
+// let btn = document.querySelector("button");
+
+// window.onscroll = function (){
+// if(window.scrollY >= 600){
+// btn.style.display = "block";
+// }else {
+// btn.style.display ="none";
+// }
+// };
+// btn.onclick = function () {
+// window.scrollTo({
+// left: 0,
+// top: 0,
+// behavior: "smooth",
+// });
+// };
+
+
+
+                                //Local Storage
+// setItem
+// .getItem
+// .removeItem
+// clear
+// key
+
+// Info
+// .No.Expiration.Time
+// - .HTTP . And . HTTPS localstorage is different 
+// -. Private . Tab once you close this tap the localstorage is cleared
+
+
+
+// Set
+
+// window.localStorage.setItem("color","black")
+// window.localStorage.fontWeight ="bold" //without set item
+// window.localStorage['FontSize'] = "20px"; //use square brackets
+
+// // Get
+// window.localStorage.color
+
+// window.localStorage.removeItem("color") //removing from local storage
+
+// // window.localStorage.clear() // remove all key values in local storage 
+
+// //get key
+// console.log(window.localStorage.key(0)) //fontsize the last key in the localstorage
+
+
+
+                    //Session Storage 
+
+// the same as local storage but in the session only
+//as soon as i close the tab or close the site  the session will be cleared automatically
+//if you did duplicate for tab the session wont be cleared
+
+//window.sessionStorage.setItem("color","black")
+
+
+
+
+                          //The End Of Bom part
+
+
+
+
+
+
+
+
+
+
+
+                                    //Destructuring 
+                                    
+
+// Destructuring
+// ".is.a. JavaScript.expression.that.allows.us.to.extract.data.from.arrays,.
+// objects, and.maps.and.set.them into.new, distinct .variables. ."
+
+
+
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
+
+let myFriends =["Ahmed", "Sayed","Ali","Maysa"];
+
+[a, b, c] = myFriends; //destructiong
+
+console.log(a); //Ahmed
+console.log(b); //Sayed
+console.log(c); //Ali
+console.log(d); //4
+
+
+
+
+
