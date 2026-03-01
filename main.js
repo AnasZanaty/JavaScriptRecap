@@ -1117,28 +1117,55 @@ let maped = myNums.map(function(element, index , arr){
 
                                     //Destructuring 
                                     
-
-// Destructuring
-// ".is.a. JavaScript.expression.that.allows.us.to.extract.data.from.arrays,.
-// objects, and.maps.and.set.them into.new, distinct .variables. ."
-
-
-
-let a = 1;
-let b = 2;
-let c = 3;
-let d = 4;
-
-let myFriends =["Ahmed", "Sayed","Ali","Maysa"];
-
-[a, b, c] = myFriends; //destructiong
-
-console.log(a); //Ahmed
-console.log(b); //Sayed
-console.log(c); //Ali
-console.log(d); //4
+// // Destructuring
+// // ".is.a. JavaScript.expression.that.allows.us.to.extract.data.from.arrays,.
+// // objects, and.maps.and.set.them into.new, distinct .variables. ."
 
 
 
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
+
+// let myFriends =["Ahmed", "Sayed","Ali","Maysa"];
+
+// [a, b, c] = myFriends; //destructiong
+
+// console.log(a); //Ahmed
+// console.log(b); //Sayed
+// console.log(c); //Ali
+// console.log(d); //4
 
 
+let myFriends = ["Ahmed", "Sayed", "Ali", ["Shady", "Amr", ["Mohamed", "Gamal"]]];
+
+//.console. log(myFriends[3] [2] [1]);
+
+let [,,,[a, , [,b]]] = myFriends;
+
+console.log(a);// Shady
+console.log(b);//Gamal
+
+
+
+// Destructuring.Array .= >.Swapping .Variables
+
+
+
+let book ="Video";
+let video = "Book";
+
+// . // .Save . Book . Value . In.Stash
+ let stash =book; // Video
+
+// //-Change Book Value
+// book .= video; // Book
+
+// //.Change. Video Value
+// video .= stash; // Video
+
+[book, video] = [video, book];
+
+console.log(book);
+console.log(video);
